@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6486ab39-5b42-44dd-a1e8-f6d445581efe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/errorMessage/ErrorMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/errorMessage/error.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/spinner/spinner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/randomChar/RandomChar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/randomChar/RandomChar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/MarvelService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MarvelService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/randomChar/randomChar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/randomChar/randomChar.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -45,6 +48,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\prog\JS + REACT COURSE\marvelpedia\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\prog\JS + REACT COURSE\marvelpedia\src\components\errorMessage" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,7 +67,8 @@
       <updated>1657172788380</updated>
       <workItem from="1657172791593" duration="922000" />
       <workItem from="1657173732940" duration="1833000" />
-      <workItem from="1657265075880" duration="11058000" />
+      <workItem from="1657265075880" duration="11201000" />
+      <workItem from="1657344888815" duration="2581000" />
     </task>
     <servers />
   </component>
