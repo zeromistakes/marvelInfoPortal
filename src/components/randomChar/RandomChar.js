@@ -1,4 +1,4 @@
-import {Component} from "react";
+import {useState, useEffect} from "react";
 
 import './randomChar.scss';
 import mjolnir from '../../resources/img/mjolnir.png';
@@ -6,40 +6,39 @@ import MarvelService from "../../services/MarvelService";
 import Spinner from "../spinner/spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 
-class RandomChar extends Component {
+const RandomChar = () => {
 
-    state = {
-        char: {},
-        loading: true,
-        error: false,
-    }
-    componentDidMount() {
-        this.updateChar();
-    }
-    marvelService = new MarvelService();
+    const [char, setChar] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
-    onCharLoading = () => {
-        this.setState({
-            loading: true,
-        })
-    }
-    onCharLoaded = (char) => {
-        this.setState({char, loading: false})
+    useEffect(() => {
+        updateChar();
+    }, [])
+
+    const marvelService = new MarvelService();
+
+    const onCharLoading = () => {
+        setLoading(true);
     }
 
-    onError = () => {
-        this.setState({loading: false, error: true})
+    const onCharLoaded = (char) => {
+        setLoading(false);
+        setChar(char);
     }
 
-    updateChar = () => {
+    const onError = () => {
+        setError(true);
+        setLoading(false);
+    }
+
+    const updateChar = () => {
         const id = Math.round(Math.random() * (1011400 - 1011000) + 1011000);
-        this.onCharLoading();
-        this.marvelService.getCharacter(id)
-            .then(this.onCharLoaded)
-            .catch(this.onError);
+        onCharLoading();
+        marvelService.getCharacter(id)
+            .then(onCharLoaded)
+            .catch(onError);
     }
-    render() {
-        const {char, loading, error} = this.state;
 
         const errorMessage = error ? <ErrorMessage/> : null;
         const spinner = loading ? <Spinner/> : null;
@@ -58,14 +57,13 @@ class RandomChar extends Component {
                     <p className="randomchar__title">
                         Or choose another one
                     </p>
-                    <button className="button button__main" onClick={this.updateChar}>
+                    <button className="button button__main" onClick={updateChar}>
                         <div className="inner">try it</div>
                     </button>
                     <img src={mjolnir} alt="mjolnir" className="randomchar__decoration"/>
                 </div>
             </div>
         )
-    }
 }
 
 const CharView = ({char}) => {
