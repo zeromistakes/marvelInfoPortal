@@ -23,6 +23,8 @@ const App = () => {
                 <div className="char__content">
                     <ErrorBoundary>
                         <CharList onCharSelected={onCharSelected}/>
+                    </ErrorBoundary>
+                    <ErrorBoundary>
                         <CharInfo charId={selectedChar}/>
                     </ErrorBoundary>
                 </div>
